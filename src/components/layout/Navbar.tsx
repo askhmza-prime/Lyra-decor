@@ -1,24 +1,44 @@
+import Link from 'next/link'
+
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-black/5">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <h1 className="font-display text-3xl">
-          Lyra <span className="text-gold">Decor</span>
-        </h1>
 
-        <div className="hidden md:flex gap-8 text-sm">
-          <a href="/">Home</a>
-          <a href="/shop">Shop</a>
-          <a href="/categories">Categories</a>
-          <a href="/journal">Journal</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
+        {/* Logo */}
+        <Link
+          href="/"
+          className="font-display text-3xl tracking-wide"
+        >
+          Lyra <span className="text-gold">Decor</span>
+        </Link>
+
+        {/* Navigation */}
+        <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest">
+          <Link href="/">Home</Link>
+          <Link href="/collections">Shop</Link>
+          <Link href="/categories">Categories</Link>
+          <Link href="/journal">Journal</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
+        </nav>
+
+        {/* Actions */}
+        <div className="flex items-center gap-4 text-lg">
+          <button className="hover:scale-110 transition">
+            🔍
+          </button>
+
+          <button className="hover:scale-110 transition">
+            ♡
+          </button>
+
+          <button className="hover:scale-110 transition">
+            🛒
+          </button>
         </div>
 
-        <button className="bg-dark text-gold3 px-4 py-2">
-          Cart
-        </button>
       </div>
-    </nav>
+    </header>
   )
 }
