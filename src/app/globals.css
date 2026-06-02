@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+  --cream:  #f5f0e8;
+  --cream2: #ede6d6;
+  --gold:   #b8952a;
+  --gold2:  #d4af4a;
+  --gold3:  #f0d080;
+  --dark:   #1a1610;
+  --dark2:  #2e2618;
+  --text:   #3a3020;
+  --text2:  #6a5c40;
+  --white:  #fdfaf4;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+}
+
+.font-display {
+  font-family: 'Cormorant Garamond', serif;
+}
