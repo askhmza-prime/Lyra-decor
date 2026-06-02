@@ -1,48 +1,40 @@
 export default function Hero() {
   return (
-    <section className="bg-cream">
+    <section className="bg-red-500 min-h-screen">
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-8 py-20">
 
-        <div className="grid lg:grid-cols-2 overflow-hidden rounded-3xl bg-white shadow-sm">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-          {/* Image Side */}
-          <div className="relative min-h-[500px] bg-cream2">
-
-            <img
-              src="https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1200"
-              alt="Luxury Decor"
-              className="w-full h-full object-cover hover:scale-105 transition duration-700"
-            />
-
+          <div>
+            <div className="bg-yellow-400 h-[500px] rounded-3xl flex items-center justify-center text-4xl font-bold">
+              IMAGE
+            </div>
           </div>
 
-          {/* Content Side */}
-          <div className="flex flex-col justify-center p-10 lg:p-16">
+          <div>
 
-            <p className="uppercase tracking-[5px] text-gold text-sm mb-4">
-              Luxury Collection
+            <p className="uppercase tracking-[6px] text-white text-sm mb-4">
+              Luxury Metal Handicrafts
             </p>
 
-            <h1 className="font-display text-5xl lg:text-7xl leading-tight">
-              Crafted by Nature
-              <br />
-              Inspired by Earth
+            <h1 className="text-6xl lg:text-8xl font-bold text-white">
+              Lyra Decor
             </h1>
 
-            <p className="mt-6 text-lyra-muted text-lg max-w-md">
-              Discover handcrafted luxury decor designed
-              to elevate modern living spaces with timeless elegance.
+            <p className="text-xl text-white mt-6 max-w-lg">
+              Handcrafted brass and metal decor pieces designed
+              for luxury homes and elegant interiors.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex gap-4">
 
-              <button className="bg-dark text-gold3 px-8 py-4 rounded-xl hover:scale-105 transition">
-                Shop Collection
+              <button className="bg-black text-white px-8 py-4 rounded-xl">
+                Shop Now
               </button>
 
-              <button className="border border-gold px-8 py-4 rounded-xl hover:bg-cream2 transition">
-                Explore More
+              <button className="bg-white text-black px-8 py-4 rounded-xl">
+                Explore
               </button>
 
             </div>
