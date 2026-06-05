@@ -1,9 +1,23 @@
+import Link from 'next/link'
+
 export default function FeaturedProducts() {
   const products = [
-    "Brass Vase",
-    "Metal Wall Art",
-    "Decor Lamp",
-    "Luxury Bowl",
+    {
+      name: "Brass Vase",
+      slug: "brass-vase",
+    },
+    {
+      name: "Metal Wall Art",
+      slug: "wall-art",
+    },
+    {
+      name: "Decor Lamp",
+      slug: "decor-lamp",
+    },
+    {
+      name: "Luxury Bowl",
+      slug: "luxury-bowl",
+    },
   ]
 
   return (
@@ -19,7 +33,7 @@ export default function FeaturedProducts() {
 
           {products.map((item) => (
             <div
-              key={item}
+              key={item.name}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition duration-300"
             >
 
@@ -28,16 +42,19 @@ export default function FeaturedProducts() {
               <div className="p-5">
 
                 <h3 className="font-display text-2xl">
-                  {item}
+                  {item.name}
                 </h3>
 
                 <p className="mt-2 text-lyra-muted">
                   Premium handcrafted decor
                 </p>
 
-                <button className="mt-4 w-full bg-dark text-gold3 py-3 rounded-xl">
+                <Link
+                  href={`/product/${item.slug}`}
+                  className="mt-4 w-full bg-dark text-gold3 py-3 rounded-xl block text-center"
+                >
                   View Product
-                </button>
+                </Link>
 
               </div>
 
