@@ -29,7 +29,9 @@ export default function Navbar() {
           <div className="flex items-center gap-4 text-xl">
 
             <button className="hover:scale-110 transition">
-              🔍
+              <Link href="/search">
+  🔍
+</Link>
             </button>
 
             <button className="hover:scale-110 transition">
