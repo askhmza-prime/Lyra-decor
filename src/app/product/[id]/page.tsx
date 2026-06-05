@@ -68,42 +68,56 @@ import Link from 'next/link'
 
         {/* Related Products */}
 
-        <div className="mt-24">
+<div className="mt-24">
 
-          <h2 className="font-display text-4xl mb-10">
-            Related Products
-          </h2>
+  <h2 className="font-display text-4xl mb-10">
+    Related Products
+  </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+  <div className="grid md:grid-cols-3 gap-6">
 
-            {[1, 2, 3].map((item) => (
-              <div
-                key={item}
-                className="bg-white rounded-3xl overflow-hidden shadow-sm"
-              >
-                <div className="h-56 bg-cream2" />
+    {[
+      {
+        name: "Brass Vase",
+        slug: "brass-vase",
+      },
+      {
+        name: "Wall Art",
+        slug: "wall-art",
+      },
+      {
+        name: "Luxury Bowl",
+        slug: "luxury-bowl",
+      },
+    ].map((item) => (
+      <div
+        key={item.slug}
+        className="bg-white rounded-3xl overflow-hidden shadow-sm"
+      >
+        <div className="h-56 bg-cream2" />
 
-                <div className="p-6">
-                  <h3 className="font-display text-2xl">
-                    Luxury Decor Piece
-                  </h3>
+        <div className="p-6">
 
-                  <p className="mt-2 text-lyra-muted">
-                    Premium handcrafted decor
-                  </p>
+          <h3 className="font-display text-2xl">
+            {item.name}
+          </h3>
 
-                  <button className="mt-4 bg-dark text-gold3 px-5 py-2 rounded-lg">
-                    View
-                  </button>
-                </div>
-              </div>
-            ))}
+          <p className="mt-2 text-lyra-muted">
+            Premium handcrafted decor
+          </p>
 
-          </div>
+          <Link
+            href={`/product/${item.slug}`}
+            className="mt-4 inline-block bg-dark text-gold3 px-5 py-2 rounded-lg"
+          >
+            View
+          </Link>
 
         </div>
 
       </div>
-    </section>
-  )
-}
+    ))}
+
+  </div>
+
+</div>
