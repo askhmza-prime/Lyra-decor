@@ -45,7 +45,6 @@ export default function Footer() {
               placeholder="Email Address"
               className="w-full border rounded-xl px-4 py-3"
             />
-          </div>
 
         </div>
 
