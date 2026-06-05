@@ -7,16 +7,42 @@ import Link from 'next/link'
 }) {
   const { id } = await params
 
-  const product = {
-    id,
-    name: id
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' '),
+  const products = [
+  {
+    id: 'brass-vase',
+    name: 'Brass Vase',
     price: '₹4,999',
     description:
-      'Handcrafted luxury brass decor piece designed for elegant interiors and timeless living spaces.',
-  }
+      'Luxury handcrafted brass vase designed for premium interiors.',
+  },
+
+  {
+    id: 'wall-art',
+    name: 'Metal Wall Art',
+    price: '₹7,499',
+    description:
+      'Elegant handcrafted metal wall art for modern living spaces.',
+  },
+
+  {
+    id: 'decor-lamp',
+    name: 'Decor Lamp',
+    price: '₹5,999',
+    description:
+      'Premium decorative lamp crafted to elevate luxury interiors.',
+  },
+
+  {
+    id: 'luxury-bowl',
+    name: 'Luxury Bowl',
+    price: '₹3,499',
+    description:
+      'Handcrafted brass bowl with timeless luxury aesthetics.',
+  },
+]
+
+const product =
+  products.find((item) => item.id === id) || products[0]
 
   return (
     <section className="bg-cream min-h-screen">
