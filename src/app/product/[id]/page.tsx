@@ -52,11 +52,13 @@ const product =
         <div className="grid lg:grid-cols-2 gap-12">
 
           {/* Product Image */}
-          <div className="bg-cream2 rounded-3xl h-[500px] flex items-center justify-center">
-            <span className="text-lyra-muted text-lg">
-              Product Image
-            </span>
-          </div>
+          <div className="bg-cream2 rounded-3xl overflow-hidden h-[500px]">
+  <img
+    src={product.image}
+    alt={product.name}
+    className="w-full h-full object-cover"
+  />
+</div>
 
           {/* Product Info */}
           <div>
