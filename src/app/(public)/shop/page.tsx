@@ -1,24 +1,30 @@
+import Link from 'next/link'
+
 export default function ShopPage() {
   const products = [
     {
       name: "Luxury Brass Vase",
       price: "₹4,999",
       category: "Brass Decor",
+      slug: "brass-vase",
     },
     {
       name: "Handcrafted Wall Art",
       price: "₹7,499",
       category: "Wall Art",
+      slug: "wall-art",
     },
     {
       name: "Premium Candle Holder",
       price: "₹2,999",
       category: "Decor",
+      slug: "premium-candle-holder",
     },
     {
       name: "Royal Brass Bowl",
       price: "₹3,499",
       category: "Luxury Collection",
+      slug: "royal-brass-bowl",
     },
   ]
 
@@ -65,9 +71,12 @@ export default function ShopPage() {
                   {product.price}
                 </span>
 
-                <button className="bg-dark text-gold3 px-4 py-2 rounded-xl">
+                <Link
+                  href={`/product/${product.slug}`}
+                  className="bg-dark text-gold3 px-4 py-2 rounded-xl"
+                >
                   View
-                </button>
+                </Link>
 
               </div>
 
