@@ -41,11 +41,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-semibold mb-4">
-              Newsletter
-            </h3>
-
             <input
               placeholder="Email Address"
               className="w-full border rounded-xl px-4 py-3"
