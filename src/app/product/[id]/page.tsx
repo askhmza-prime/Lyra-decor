@@ -36,6 +36,7 @@ import Link from 'next/link'
     id: 'luxury-bowl',
     name: 'Luxury Bowl',
     price: '₹3,499',
+    image: '/products/luxury-bowl.jpg',
     description:
       'Handcrafted brass bowl with timeless luxury aesthetics.',
   },
