@@ -33,7 +33,9 @@ export default function Navbar() {
             </button>
 
             <button className="hover:scale-110 transition">
-              ♡
+              <link href="/wishlist">
+                ♡
+              </link>
             </button>
 
             <button className="hover:scale-110 transition">
