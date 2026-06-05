@@ -40,12 +40,6 @@ export default function Footer() {
               <li>Lighting</li>
             </ul>
           </div>
-
-            <input
-              placeholder="Email Address"
-              className="w-full border rounded-xl px-4 py-3"
-            />
-
         </div>
 
         <div className="mt-12 pt-6 border-t text-center text-sm text-lyra-muted">
