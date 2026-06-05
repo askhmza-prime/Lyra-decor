@@ -37,7 +37,9 @@ export default function Navbar() {
             </button>
 
             <button className="hover:scale-110 transition">
+              <Link href="/cart">
               🛒
+              </Link>
             </button>
 
           </div>
