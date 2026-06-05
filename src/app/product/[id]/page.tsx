@@ -1,4 +1,6 @@
-export default async function ProductPage({
+import Link from 'next/link'
+
+  export default async function ProductPage({
   params,
 }: {
   params: Promise<{ id: string }>
