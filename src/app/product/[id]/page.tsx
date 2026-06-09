@@ -82,17 +82,30 @@ const product =
               {product.description}
             </p>
 
-            <div className="flex gap-4">
+            <div>
 
-              <button className="bg-dark text-gold3 px-8 py-4 rounded-xl hover:scale-105 transition">
-                Add To Cart
-              </button>
+  <div className="flex gap-4">
 
-              <button className="border border-gold px-8 py-4 rounded-xl hover:bg-cream2 transition">
-                Buy Now
-              </button>
+    <button className="bg-dark text-gold3 px-8 py-4 rounded-xl hover:scale-105 transition">
+      Add To Cart
+    </button>
 
-            </div>
+    <button className="border border-gold px-8 py-4 rounded-xl hover:bg-cream2 transition">
+      Buy Now
+    </button>
+
+  </div>
+
+  <a
+    href={`https://wa.me/917668521105?text=Hello%20Lyra%20Decor,%20I%20would%20like%20a%20quote%20for%20${product.name}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-4 block text-center bg-gold text-dark px-8 py-4 rounded-xl hover:scale-105 transition"
+  >
+    Request Quote
+  </a>
+
+</div>
 
           </div>
 
