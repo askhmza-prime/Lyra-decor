@@ -2,23 +2,27 @@ import Link from 'next/link'
 
 export default function FeaturedProducts() {
   const products = [
-    {
-      name: "Brass Vase",
-      slug: "brass-vase",
-    },
-    {
-      name: "Metal Wall Art",
-      slug: "wall-art",
-    },
-    {
-      name: "Decor Lamp",
-      slug: "decor-lamp",
-    },
-    {
-      name: "Luxury Bowl",
-      slug: "luxury-bowl",
-    },
-  ]
+  {
+    name: "Brass Vase",
+    slug: "brass-vase",
+    image: "/products/brass-vase.jpg",
+  },
+  {
+    name: "Metal Wall Art",
+    slug: "wall-art",
+    image: "/products/metal-wall-art.jpg",
+  },
+  {
+    name: "Decor Lamp",
+    slug: "decor-lamp",
+    image: "/products/decor-lamp.jpg",
+  },
+  {
+    name: "Luxury Bowl",
+    slug: "luxury-bowl",
+    image: "/products/luxury-bowl.jpg",
+  },
+]
 
   return (
     <section className="py-24">
@@ -37,7 +41,13 @@ export default function FeaturedProducts() {
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition duration-300"
             >
 
-              <div className="h-72 bg-cream2" />
+              <div className="h-72 overflow-hidden">
+  <img
+    src={item.image}
+    alt={item.name}
+    className="w-full h-full object-cover"
+  />
+</div>
 
               <div className="p-5">
 
