@@ -7,24 +7,28 @@ export default function ShopPage() {
       price: "₹4,999",
       category: "Brass Decor",
       slug: "brass-vase",
+      image: "/products/brass-vase.jpg",
     },
     {
       name: "Handcrafted Wall Art",
       price: "₹7,499",
       category: "Wall Art",
       slug: "wall-art",
+      image: "/products/metal-wall-art.jpg",
     },
     {
       name: "Premium Candle Holder",
       price: "₹2,999",
       category: "Decor",
       slug: "premium-candle-holder",
+      image: "/products/decor-lamp.jpg",
     },
     {
       name: "Royal Brass Bowl",
       price: "₹3,499",
       category: "Luxury Collection",
       slug: "royal-brass-bowl",
+      image: "/products/luxury-bowl.jpg",
     },
   ]
 
