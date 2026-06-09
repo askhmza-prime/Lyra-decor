@@ -18,7 +18,7 @@ export default function CategoriesPage() {
     {
       title: "Handcrafted Collection",
       desc: "Unique artisan creations",
-      image: "/products/luxury-bowl",
+      image: "/products/luxury-bowl.jpg",
     },
   ]
 
