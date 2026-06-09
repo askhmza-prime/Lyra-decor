@@ -12,6 +12,7 @@ import Link from 'next/link'
     id: 'brass-vase',
     name: 'Brass Vase',
     price: '₹4,999',
+    image: '/products/brass-vase.jpg',
     description:
       'Luxury handcrafted brass vase designed for premium interiors.',
   },
@@ -20,6 +21,7 @@ import Link from 'next/link'
     id: 'wall-art',
     name: 'Metal Wall Art',
     price: '₹7,499',
+    image: '/products/metal-wall-art.jpg',
     description:
       'Elegant handcrafted metal wall art for modern living spaces.',
   },
@@ -28,6 +30,7 @@ import Link from 'next/link'
     id: 'decor-lamp',
     name: 'Decor Lamp',
     price: '₹5,999',
+    image: '/products/decor-lamp.jpg',
     description:
       'Premium decorative lamp crafted to elevate luxury interiors.',
   },
