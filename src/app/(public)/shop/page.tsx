@@ -57,7 +57,13 @@ export default function ShopPage() {
             key={product.name}
             className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition"
           >
-            <div className="h-64 bg-cream2" />
+            <div className="h-64 overflow-hidden">
+  <img
+    src={product.image}
+    alt={product.name}
+    className="w-full h-full object-cover"
+  />
+</div>
 
             <div className="p-5">
 
