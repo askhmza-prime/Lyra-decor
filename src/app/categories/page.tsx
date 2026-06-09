@@ -3,18 +3,22 @@ export default function CategoriesPage() {
     {
       title: "Brass Decor",
       desc: "Luxury brass handcrafted pieces",
+    image: "/products/brass-vase.jpg",
     },
     {
       title: "Metal Wall Art",
       desc: "Premium decorative wall pieces",
+      image: "/products/metal-wall-art.jpg",
     },
     {
       title: "Luxury Lighting",
       desc: "Elegant lamps and lighting",
+      image: "/products/decor-lamp.jpg",
     },
     {
       title: "Handcrafted Collection",
       desc: "Unique artisan creations",
+      image: "/products/luxury-bowl",
     },
   ]
 
@@ -36,7 +40,13 @@ export default function CategoriesPage() {
             key={item.title}
             className="bg-white rounded-3xl p-10 shadow-sm hover:-translate-y-1 transition"
           >
-            <div className="h-40 bg-cream2 rounded-2xl mb-6" />
+            <div className="h-40 rounded-2xl overflow-hidden mb-6">
+  <img
+    src={item.image}
+    alt={item.title}
+    className="w-full h-full object-cover"
+  />
+</div>
 
             <h2 className="font-display text-4xl">
               {item.title}
