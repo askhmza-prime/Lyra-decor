@@ -112,21 +112,35 @@ const product =
       {
         name: "Brass Vase",
         slug: "brass-vase",
+        image: "/products/brass-vase.jpg",
       },
       {
         name: "Wall Art",
         slug: "wall-art",
+        image: "/products/metal-wall-art.jpg",
       },
       {
         name: "Luxury Bowl",
         slug: "luxury-bowl",
+        image: "/products/luxury-bowl.jpg",
+      },
+  {
+        name: "Decor Lamp",
+        slug: "decor-lamp",
+        image: "/products/decor-lamp.jpg",
       },
     ].map((item) => (
       <div
         key={item.slug}
         className="bg-white rounded-3xl overflow-hidden shadow-sm"
       >
-        <div className="h-56 bg-cream2" />
+        <div className="h-56 overflow-hidden">
+  <img
+    src={item.image}
+    alt={item.name}
+    className="w-full h-full object-cover"
+  />
+</div>
 
         <div className="p-6">
 
