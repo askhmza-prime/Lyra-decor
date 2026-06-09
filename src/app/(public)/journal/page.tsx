@@ -1,4 +1,25 @@
 export default function JournalPage() {
+  const posts = [
+    {
+      title: "Luxury Brass Craftsmanship",
+      image: "/products/brass-vase.jpg",
+      description:
+        "Discover the artistry behind handcrafted brass decor collections.",
+    },
+    {
+      title: "Modern Metal Wall Art",
+      image: "/products/metal-wall-art.jpg",
+      description:
+        "Explore elegant wall art pieces designed for luxury interiors.",
+    },
+    {
+      title: "Lighting That Elevates Spaces",
+      image: "/products/decor-lamp.jpg",
+      description:
+        "How premium lighting transforms the atmosphere of your home.",
+    },
+  ]
+
   return (
     <main className="max-w-6xl mx-auto px-6 py-20">
 
@@ -12,23 +33,32 @@ export default function JournalPage() {
 
       <div className="grid md:grid-cols-3 gap-8 mt-12">
 
-        {[1,2,3].map((post) => (
+        {posts.map((post) => (
           <article
-            key={post}
+            key={post.title}
             className="bg-white rounded-3xl overflow-hidden shadow-sm"
           >
-            <div className="h-56 bg-cream2" />
+
+            <div className="h-56 overflow-hidden">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
 
             <div className="p-6">
+
               <h2 className="font-display text-3xl">
-                Luxury Brass Craftsmanship
+                {post.title}
               </h2>
 
               <p className="mt-3 text-lyra-muted">
-                Discover the artistry behind handcrafted
-                brass decor collections.
+                {post.description}
               </p>
+
             </div>
+
           </article>
         ))}
 
