@@ -30,6 +30,24 @@ export default function Footer() {
           </div>
 
           <div>
+
+  <h3 className="font-semibold mb-4">
+    Contact
+  </h3>
+
+  <ul className="space-y-2 text-lyra-muted">
+
+    <li>+91 76685 21105</li>
+
+    <li>hello@lyradecor.com</li>
+
+    <li>Moradabad, India</li>
+
+  </ul>
+
+</div>
+
+          <div>
             <h3 className="font-semibold mb-4">
               Collections
             </h3>
