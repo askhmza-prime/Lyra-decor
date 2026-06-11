@@ -1,32 +1,44 @@
+'use client'
+
 import Link from 'next/link'
+import { useCartStore } from '@/store/cartStore'
 
 export default function FeaturedProducts() {
+  const addToCart = useCartStore((state) => state.addToCart)
+
   const products = [
-  {
-    name: "Brass Vase",
-    slug: "brass-vase",
-    image: "/products/brass-vase.jpg",
-  },
-  {
-    name: "Metal Wall Art",
-    slug: "wall-art",
-    image: "/products/metal-wall-art.jpg",
-  },
-  {
-    name: "Decor Lamp",
-    slug: "decor-lamp",
-    image: "/products/decor-lamp.jpg",
-  },
-  {
-    name: "Luxury Bowl",
-    slug: "luxury-bowl",
-    image: "/products/luxury-bowl.jpg",
-  },
-]
+    {
+      id: '1',
+      name: 'Brass Vase',
+      price: '₹4,999',
+      slug: 'brass-vase',
+      image: '/products/brass-vase.jpg',
+    },
+    {
+      id: '2',
+      name: 'Metal Wall Art',
+      price: '₹7,999',
+      slug: 'wall-art',
+      image: '/products/metal-wall-art.jpg',
+    },
+    {
+      id: '3',
+      name: 'Decor Lamp',
+      price: '₹5,499',
+      slug: 'decor-lamp',
+      image: '/products/decor-lamp.jpg',
+    },
+    {
+      id: '4',
+      name: 'Luxury Bowl',
+      price: '₹3,999',
+      slug: 'luxury-bowl',
+      image: '/products/luxury-bowl.jpg',
+    },
+  ]
 
   return (
     <section className="py-24">
-
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="font-display text-5xl text-center mb-16">
@@ -37,17 +49,16 @@ export default function FeaturedProducts() {
 
           {products.map((item) => (
             <div
-              key={item.name}
+              key={item.id}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:-translate-y-2 transition duration-300"
             >
-
               <div className="h-72 overflow-hidden">
-  <img
-    src={item.image}
-    alt={item.name}
-    className="w-full h-full object-cover"
-  />
-</div>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
               <div className="p-5">
 
@@ -56,15 +67,26 @@ export default function FeaturedProducts() {
                 </h3>
 
                 <p className="mt-2 text-lyra-muted">
-                  Premium handcrafted decor
+                  {item.price}
                 </p>
 
-                <Link
-                  href={`/product/${item.slug}`}
-                  className="mt-4 w-full bg-dark text-gold3 py-3 rounded-xl block text-center"
-                >
-                  View Product
-                </Link>
+                <div className="mt-4 flex flex-col gap-3">
+
+                  <button
+                    onClick={() => addToCart(item)}
+                    className="w-full bg-black text-white py-3 rounded-xl"
+                  >
+                    Add To Cart
+                  </button>
+
+                  <Link
+                    href={`/product/${item.slug}`}
+                    className="w-full border border-black py-3 rounded-xl text-center"
+                  >
+                    View Product
+                  </Link>
+
+                </div>
 
               </div>
 
@@ -74,7 +96,6 @@ export default function FeaturedProducts() {
         </div>
 
       </div>
-
     </section>
   )
 }
