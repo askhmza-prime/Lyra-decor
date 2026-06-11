@@ -73,10 +73,7 @@ export default function FeaturedProducts() {
                 <div className="mt-4 flex flex-col gap-3">
 
                   <button
-                    onClick={() => {
-  alert("ADDING")
-  addToCart(item)
-}}
+                    onClick={() => addToCart(item)}
                     className="w-full bg-black text-white py-3 rounded-xl"
                   >
                     Add To Cart
