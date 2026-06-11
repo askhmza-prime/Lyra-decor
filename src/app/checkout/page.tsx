@@ -1,4 +1,16 @@
+'use client'
+
+import { useCartStore } from '@/store/cartStore'
+
 export default function CheckoutPage() {
+  const cart = useCartStore((state) => state.cart)
+
+  const total = cart.reduce(
+    (sum, item) =>
+      sum + Number(item.price.replace(/[₹,]/g, '')),
+    0
+  )
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-20">
 
@@ -70,19 +82,21 @@ export default function CheckoutPage() {
 
           <div className="space-y-4">
 
-            <div className="flex justify-between">
-              <span>Brass Vase</span>
-              <span>₹4,999</span>
-            </div>
-
-            <div className="flex justify-between">
-              <span>Metal Wall Art</span>
-              <span>₹7,499</span>
-            </div>
+            {cart.map((item, index) => (
+              <div
+                key={index}
+                className="flex justify-between"
+              >
+                <span>{item.name}</span>
+                <span>{item.price}</span>
+              </div>
+            ))}
 
             <div className="border-t pt-4 flex justify-between font-semibold text-xl">
               <span>Total</span>
-              <span>₹12,498</span>
+              <span>
+                ₹{total.toLocaleString()}
+              </span>
             </div>
 
           </div>
