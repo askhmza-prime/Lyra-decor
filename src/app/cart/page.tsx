@@ -47,9 +47,20 @@ export default function CartPage() {
                     </h3>
                   </div>
 
-                  <div className="font-semibold">
-                    {item.price}
-                  </div>
+                  <div className="flex items-center gap-4">
+
+  <div className="font-semibold">
+    {item.price}
+  </div>
+
+  <button
+    onClick={() => removeFromCart(item.id)}
+    className="text-red-500"
+  >
+    Remove
+  </button>
+
+</div>
                 </div>
               ))}
 
