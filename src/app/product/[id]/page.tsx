@@ -1,5 +1,6 @@
 'use client'
 
+import { use } from 'react'
 import Link from 'next/link'
 import { useCartStore } from '@/store/cartStore'
 
@@ -37,10 +38,10 @@ const products = [
 export default function ProductPage({
   params,
 }: {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }) {
+  const { id } = use(params)
   const addToCart = useCartStore((state) => state.addToCart)
-  const { id } = params
 
   const product = products.find((item) => item.id === id) || products[0]
   const relatedProducts = products.filter((item) => item.id !== product.id)
