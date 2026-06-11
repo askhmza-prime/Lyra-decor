@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useCartStore } from '@/store/cartStore'
 
 export default function CartPage() {
@@ -80,14 +81,16 @@ export default function CartPage() {
             <div className="mt-8 border-t pt-6">
 
               <div className="flex justify-between text-xl font-semibold">
-
                 <span>Total</span>
-
-                <span>
-                  ₹{total.toLocaleString()}
-                </span>
-
+                <span>₹{total.toLocaleString()}</span>
               </div>
+
+              <Link
+                href="/checkout"
+                className="mt-6 block text-center bg-dark text-gold3 py-4 rounded-xl"
+              >
+                Proceed To Checkout
+              </Link>
 
             </div>
 
