@@ -12,51 +12,80 @@ export default function CheckoutPage() {
 
       <div className="grid lg:grid-cols-2 gap-8">
 
-      <div className="bg-white rounded-3xl p-8">
+        <div className="bg-white rounded-3xl p-8">
 
-        <div className="grid gap-6">
+          <div className="grid gap-6">
 
-          <input
-            type="text"
-            placeholder="Full Name"
-            className="border rounded-xl p-4"
-          />
+            <input
+              type="text"
+              placeholder="Full Name"
+              className="border rounded-xl p-4"
+            />
 
-          <input
-            type="email"
-            placeholder="Email Address"
-            className="border rounded-xl p-4"
-          />
+            <input
+              type="email"
+              placeholder="Email Address"
+              className="border rounded-xl p-4"
+            />
 
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            className="border rounded-xl p-4"
-          />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              className="border rounded-xl p-4"
+            />
 
-          <input
-            type="text"
-            placeholder="Address"
-            className="border rounded-xl p-4"
-          />
+            <input
+              type="text"
+              placeholder="Address"
+              className="border rounded-xl p-4"
+            />
 
-          <input
-            type="text"
-            placeholder="City"
-            className="border rounded-xl p-4"
-          />
+            <input
+              type="text"
+              placeholder="City"
+              className="border rounded-xl p-4"
+            />
 
-          <input
-            type="text"
-            placeholder="Pincode"
-            className="border rounded-xl p-4"
-          />
+            <input
+              type="text"
+              placeholder="Pincode"
+              className="border rounded-xl p-4"
+            />
 
-          <button
-            className="bg-dark text-gold3 py-4 rounded-xl"
-          >
-            Place Order
-          </button>
+            <button
+              className="bg-dark text-gold3 py-4 rounded-xl"
+            >
+              Place Order
+            </button>
+
+          </div>
+
+        </div>
+
+        <div className="bg-white rounded-3xl p-8 h-fit">
+
+          <h2 className="font-display text-3xl mb-6">
+            Order Summary
+          </h2>
+
+          <div className="space-y-4">
+
+            <div className="flex justify-between">
+              <span>Brass Vase</span>
+              <span>₹4,999</span>
+            </div>
+
+            <div className="flex justify-between">
+              <span>Metal Wall Art</span>
+              <span>₹7,499</span>
+            </div>
+
+            <div className="border-t pt-4 flex justify-between font-semibold text-xl">
+              <span>Total</span>
+              <span>₹12,498</span>
+            </div>
+
+          </div>
 
         </div>
 
