@@ -6,15 +6,15 @@ export default function CartPage() {
   const cart = useCartStore((state) => state.cart)
 
   const removeFromCart = useCartStore(
-  (state) => state.removeFromCart
-)
+    (state) => state.removeFromCart
+  )
 
-const total = cart.reduce(
-  (sum, item) =>
-    sum + Number(item.price.replace(/[₹,]/g, '')),
-  0
-)
-  
+  const total = cart.reduce(
+    (sum, item) =>
+      sum + Number(item.price.replace(/[₹,]/g, '')),
+    0
+  )
+
   return (
     <main className="max-w-7xl mx-auto px-6 py-20">
 
@@ -59,22 +59,38 @@ const total = cart.reduce(
 
                   <div className="flex items-center gap-4">
 
-  <div className="font-semibold">
-    {item.price}
-  </div>
+                    <div className="font-semibold">
+                      {item.price}
+                    </div>
 
-  <button
-    onClick={() => removeFromCart(item.id)}
-    className="text-red-500"
-  >
-    Remove
-  </button>
+                    <button
+                      onClick={() => removeFromCart(item.id)}
+                      className="text-red-500"
+                    >
+                      Remove
+                    </button>
 
-</div>
+                  </div>
+
                 </div>
               ))}
 
             </div>
+
+            <div className="mt-8 border-t pt-6">
+
+              <div className="flex justify-between text-xl font-semibold">
+
+                <span>Total</span>
+
+                <span>
+                  ₹{total.toLocaleString()}
+                </span>
+
+              </div>
+
+            </div>
+
           </>
         )}
 
