@@ -9,6 +9,12 @@ export default function CartPage() {
   (state) => state.removeFromCart
 )
 
+const total = cart.reduce(
+  (sum, item) =>
+    sum + Number(item.price.replace(/[₹,]/g, '')),
+  0
+)
+  
   return (
     <main className="max-w-7xl mx-auto px-6 py-20">
 
