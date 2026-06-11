@@ -5,6 +5,10 @@ import { useCartStore } from '@/store/cartStore'
 export default function CartPage() {
   const cart = useCartStore((state) => state.cart)
 
+  const removeFromCart = useCartStore(
+  (state) => state.removeFromCart
+)
+
   return (
     <main className="max-w-7xl mx-auto px-6 py-20">
 
