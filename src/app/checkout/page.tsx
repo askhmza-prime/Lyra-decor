@@ -10,6 +10,8 @@ export default function CheckoutPage() {
         Complete Order
       </h1>
 
+      <div className="grid lg:grid-cols-2 gap-8">
+
       <div className="bg-white rounded-3xl p-8">
 
         <div className="grid gap-6">
